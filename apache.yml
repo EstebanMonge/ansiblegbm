@@ -13,7 +13,7 @@
        enabled: yes
   - name: Enable http port
     firewalld:
-       port: 80/tcp
+       service: http
        permanent: true
        state: enabled
   become: true
