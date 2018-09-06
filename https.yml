@@ -1,0 +1,22 @@
+---
+- name: Install mod_ssl on RHEL 7
+  hosts: all
+  tasks:
+  - name: Install mod_ssl package
+    package:
+       name: mod_ssl
+       state: present
+  - name: Restart httpd service
+    service:
+       name: httpd
+       state: restarted
+  - name: Enable https port
+    firewalld:
+       service: https
+       permanent: true
+       state: enabled
+  - name: Reload firewalld
+    command: /usr/bin/firewall-cmd --reload
+  become: true
+  become_method: sudo
+
