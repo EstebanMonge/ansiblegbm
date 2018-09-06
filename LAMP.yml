@@ -1,4 +1,4 @@
 ---
 - name: Install a complete LAMP middleware
   hosts: all
-  - import_playbook: apache.yml
+  import_playbook: apache.yml
