@@ -9,6 +9,12 @@
     with_items:
        - mariadb 
        - mariadb-server 
+  - name: Start and enable mariadb service
+    service:
+       name: mariadb
+       state: started
+       enabled: yes
+
   become: true
   become_method: sudo
 
