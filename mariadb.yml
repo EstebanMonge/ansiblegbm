@@ -1,0 +1,14 @@
+---
+- name: Install MariaDB on RHEL 7
+  hosts: all
+  tasks:
+  - name: Install mariadb packages
+    package:
+       name: "{{ item }}"
+       state: present
+    with_items:
+       - mariadb 
+       - mariadb-server 
+  become: true
+  become_method: sudo
+
