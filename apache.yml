@@ -1,0 +1,13 @@
+---
+- name: Install Apache on RHEL 7
+  hosts: all
+  tasks:
+  - name: Install httpd package
+    package:
+       name: httpd
+       state: present
+  - name: Start and enable httpd service
+    service:
+       name: httpd
+       state: started
+       enabled: yes

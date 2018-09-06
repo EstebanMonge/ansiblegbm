@@ -1,5 +1,5 @@
 ---
-- name: This is a hello-world example
+- name: This is a hello-world example with sudo
   hosts: all
   tasks:
   - name: Create a file called '/usr/local/etc/testfile.txt' with the content 'hello world'.
