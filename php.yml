@@ -1,0 +1,14 @@
+---
+- name: Install PHP on RHEL 7
+  hosts: all
+  tasks:
+  - name: Install php packages
+    package:
+       name: php php-mysql php-gd
+       name: php-mysql 
+       name: php-gd 
+       name: php-mbstring 
+       state: present
+  become: true
+  become_method: sudo
+
