@@ -11,6 +11,11 @@
        name: httpd
        state: started
        enabled: yes
+  - name: Enable http port
+    firewalld:
+       port: 80/tcp
+       permanent: true
+       state: enabled
   become: true
   become_method: sudo
 
