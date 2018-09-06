@@ -4,11 +4,13 @@
   tasks:
   - name: Install php packages
     package:
-       name: php php-mysql php-gd
-       name: php-mysql 
-       name: php-gd 
-       name: php-mbstring 
+       name: {{ item }}
        state: present
+    with_items:
+       - php
+       - php-mysql
+       - php-mbstring
+       - php-gd
   become: true
   become_method: sudo
 
