@@ -16,6 +16,8 @@
        service: http
        permanent: true
        state: enabled
+  - name: Reload firewalld
+       command: /usr/bin/firewall-cmd
   become: true
   become_method: sudo
 
