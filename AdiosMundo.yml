@@ -1,6 +1,0 @@
----
-- name: This is a bye-world example
-  hosts: all
-  tasks:
-  - name: Create a file called '/tmp/testfile.txt' with the content 'bye world'.
-    copy: content="bye world\n" dest=/tmp/testfile.txt
